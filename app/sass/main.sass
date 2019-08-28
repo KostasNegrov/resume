@@ -1,0 +1,43 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "normalize"
+@import "_mixins/mixins"
+
+@import "blocks/header"
+@import "blocks/intro"
+
+
+
+*,
+::before,
+::after 
+	box-sizing: border-box
+	
+body
+	font-family: $default-font
+	font-size: 16px;
+	line-height: 1
+	margin: 0
+	padding: 0
+	background-color: $white
+a
+	text-decoration: none
+	display: block
+	color: $primary
+li
+	list-style: none
+
+.container
+	max-width: 1170px
+	min-width: 320px
+	padding: 0 15px 
+	margin: 0 auto
+   
+p 
+	margin: 0
+	padding: 0
+ 
+	
+
+@import "media" // Всегда в конце

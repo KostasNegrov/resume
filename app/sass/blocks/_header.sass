@@ -1,0 +1,142 @@
+
+
+
+.header   
+  padding: 10px 0
+  border-bottom: 1px solid rgba($primary, .2)
+  position: fixed  
+  z-index: 2
+  left: 0
+  top: 0
+  right: 0  
+  transition: all .5s
+  &__box
+    display: flex
+    align-items: center     
+  &__logo
+    display: flex
+    align-items: center
+  &__icon
+    width: 55px  
+    height: 55px 
+    border: 1px solid $primary
+    border-radius: 50%
+    &--img
+      width: 100%
+      border-radius: 50%
+      border: 2px solid transparent      
+  &__descriptioon
+    padding-left: 20px
+    &--name
+      font-size: 1em
+      color: $colortext
+      font-weight: bold
+      padding-bottom: 5px
+    &--profession
+      font-size: 0.775em
+      color: $colordecoration
+      font-weight: bold
+      font-style: italic
+  &__link
+    margin-left: auto  
+    color: $colortext
+    display: flex
+    align-items: center
+  &__language
+    text-transform: uppercase    
+    display: inline-block
+    color: $primary
+    font-size: .775em
+    
+    
+  &__cocial-icon
+    display: flex
+    align-items: center
+  &__social--text
+      color: transparent
+
+  &__social--gh               /* icon github */
+    margin-left: 22px
+    width: 30px
+    height: 30px
+    border-radius: 50%
+    background-color: transparent
+    position: relative
+    border: 2px solid $primary
+    transition-duration: 600ms
+    transition-property: background-color   
+    &:hover
+      background-color: $primary
+      &::before      
+        color: $accent
+    &::before
+      content: '\f09b'
+      position: absolute
+      font-family: 'fontAwesome'
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      font-size: 20px
+      color: $primary
+      transition-duration: 500ms
+      transition-property: color
+  &__social--vk                        /* icon VK */
+    margin-left: 22px
+    width: 30px
+    height: 30px
+    border-radius: 50%
+    background-color: transparent
+    position: relative
+    border: 2px solid $primary
+    transition-duration: 600ms
+    transition-property: background-color   
+    &:hover
+      background-color: $primary
+      &::before      
+        color: $accent
+    &::before
+      content: '\f189'
+      position: absolute
+      font-family: 'fontAwesome'
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      font-size: 15px
+      color: $primary
+      transition-duration: 500ms
+      transition-property: color
+  &__social--ln                        /* icon linkdine */
+    margin-left: 22px
+    width: 30px
+    height: 30px
+    border-radius: 50%
+    background-color: transparent
+    position: relative
+    border: 2px solid $primary
+    transition-duration: 600ms
+    transition-property: background-color   
+    &:hover
+      background-color: $primary
+      &::before      
+        color: $accent
+    &::before
+      content: '\f0e1'
+      position: absolute
+      font-family: 'fontAwesome'
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      font-size: 15px
+      color: $primary
+      transition-duration: 500ms
+      transition-property: color
+    
+.header__scrolled
+	padding: 3px 0
+	background: rgba($colorbg, .98)
+	transition: all .5s
+  height: 60px
+  
+  
+  
+  
