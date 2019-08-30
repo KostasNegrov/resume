@@ -1,0 +1,46 @@
+.button
+  margin-left: 41px
+  text-transform: uppercase
+  background: transparent
+  color: $colortext
+  border: 1px solid $colortext
+  position: relative
+  overflow: hidden
+  padding: 16px 32px
+  font-size: 15px  
+  cursor: pointer
+  transition: 800ms ease all
+  outline: none 
+  &:after
+    content: ''
+    position: absolute
+    width: 0   
+    bottom: -5%
+    background: $colordecoration
+    transition: .3s
+    height: 120%
+    left: -10%  
+    transform: skewX(15deg)
+    z-index: -1
+  
+  &:hover     
+    color: $white
+    &:after
+      width: 110%
+      left: -5%
+      bottom: -5%
+      color: #5bcaff
+  &:active 
+    background: #000
+
+    
+   
+    
+
+    
+    
+   
+    
+
+
+ 

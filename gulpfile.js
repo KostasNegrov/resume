@@ -8,6 +8,7 @@ global.$ = {
   path: {
     config: require('./gulp/config'), /* подключаем файл config.js */
     jquery: './app/libs/jquery/jquery.min.js', /* подключаем библиотеку */
+    slidePro: './app/libs/slider-pro/jquery.sliderPro.js', /* подключаем библиотеку */
     js: './app/js/**/*.js',               /* подключаем файл js */
   }
 };
