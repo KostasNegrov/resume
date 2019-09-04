@@ -1,14 +1,17 @@
 
 .intro
   width: 100%
-  // height: 88
+  height: auto
   background: url('../images/photo/bg-images_1920px.jpg') center no-repeat
   background-size: cover
   background-attachment: fixed
   overflow: hidden
   position: relative
-  z-index: 0
-  border-radius: 
+  z-index: 0  
+  @media (min-resolution: 2dppx), (max-width: 1500px)
+      background-image: url('../images/photo/bg-images_1270px.jpg')
+  @media (min-resolution: 2dppx), (max-width: 769px)
+      background-image: url('../images/photo/bg-images_780px.jpg')
   &::before
     content: ' '
     background-color: rgba($colorbg, .85)
@@ -19,36 +22,86 @@
     bottom: 0
     z-index: -1
   &__box
-    margin-top: 230px
-    margin-bottom: 170px
+    margin-top: 340px
+    // margin-bottom: 170px
     cursor: default
     z-index: 0
   &__title
     text-transform: uppercase
-    font-size: 24px
+    font-size: 1.5em
     font-weight: 300
-    color: $colortext
-    // border-left: 3px solid $colordecoration
-    padding-left: 35px
-    margin-bottom: 40px
+    color: $colortext    
+    padding-left: 1.458em
+    margin-bottom: 1.666em
     &--big
       display: block
-      font-size: 42px
+      font-size: 1.75em
       color: $accent
       font-weight: normal
   &__paragraph
     width: 750px
-    font-size: 17px
+    font-size: 1.062em
     color: $colortext
-    margin-left: 41px
-    padding-bottom: 40px
+    margin-left: 2.411em
+    padding-bottom: 2.352em
     border-bottom: 1px solid rgba($primary, .2)
-    margin-bottom: 45px
+    margin-bottom: 2.647em
   &__line
     width: 3px
     height: 90px
     background-color: $colordecoration
     float: left
+     
+@media (max-width: 1400px)
+  .intro
+    height: 690px
+  .intro__box
+    margin-top: 230px
+
+@media (min-width: 1550px)
+  .intro__title
+    font-size: 1.8em
+  .intro__paragraph
+    font-size: 1.1em
+  .intro__line
+    height: 110px
+
+@media (max-width: 910px)
+  .intro__paragraph
+    width: 82%
+@media (max-width: 768px)
+  .intro__title
+    font-size: 1.2em
+  .intro__paragraph
+    font-size: 1em
+    margin-left: 1.9em
+  .intro__line
+    height: 110px
+  .intro__box
+    margin-top: 180px
+  .intro
+    height: 580px
+@media (max-width: 576px)
+  .intro__box
+    margin-top: 140px
+  .intro
+    height: 510px
+  .intro__title
+    font-size: 1em
+  .intro__paragraph
+    font-size: 0.9em
+    margin-left: 1.8em
+  .intro__line
+    height: 65px
+  .intro__box
+@media (max-width: 370px)
+  .intro
+    background-image: none
+
+
+
+
+  
 
  
 

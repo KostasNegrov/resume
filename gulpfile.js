@@ -6,9 +6,11 @@ global.$ = {
   imageminJpegRecompress: require('imagemin-jpeg-recompress'),
   pngquant: require('imagemin-pngquant'),
   path: {
-    config: require('./gulp/config'), /* подключаем файл config.js */
-    jquery: './app/libs/jquery/jquery.min.js', /* подключаем библиотеку */
+    config: require('./gulp/config'), /* подключаем файл config.js */    
+    jquery: './app/libs/jquery/jquery.min.js', /* подключаем библиотеку */     
     slidePro: './app/libs/slider-pro/jquery.sliderPro.js', /* подключаем библиотеку */
+    // wow: './app/libs/wow/wow.js', /* подключаем библиотеку */
+        
     js: './app/js/**/*.js',               /* подключаем файл js */
   }
 };

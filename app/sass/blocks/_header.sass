@@ -14,9 +14,11 @@
     display: flex
     align-items: center     
   &__logo
-    display: flex
+    // display: flex
     align-items: center
+    flex: 2
   &__icon
+    float: left
     width: 55px  
     height: 55px 
     border: 1px solid $primary
@@ -26,7 +28,10 @@
       border-radius: 50%
       border: 2px solid transparent      
   &__descriptioon
-    padding-left: 20px
+    // padding-left: 20px
+    width: 160px
+    margin-top: 10px
+    margin-left: 70px
     &--name
       font-size: 1em
       color: $colortext
@@ -38,15 +43,18 @@
       font-weight: bold
       font-style: italic
   &__link
-    margin-left: auto  
+    // margin-left: auto  
+    // color: $colortext
+    // display: flex
+    // align-items: center
+  &__lang
+    margin-left: 20px
     color: $colortext
-    display: flex
-    align-items: center
   &__language
     text-transform: uppercase    
     display: inline-block
-    color: $primary
-    font-size: .775em
+    color: $colortext
+    font-size: .775em  
     
     
   &__cocial-icon
@@ -138,5 +146,37 @@
   height: 60px
   
   
+@media (max-width: 613px) 
+  .header__box   
+    display: block
+    position: relative
+ 
+  .header__cocial-icon
+    position: absolute
+    right: 0
+    top: 17px  
+    margin: 0
+    padding: 0    
+  .header__lang
+    position: absolute
+    right: 0
+    top: 0
+  .header__descriptioon--name
+    padding-top: 10px
+
+
+@media (max-width: 370px)
+  .header__icon
+    display: none
+  .header__descriptioon
+    margin: 0
+  .header__social--gh,
+  .header__social--vk,
+  .header__social--ln
+    width: 25px
+    height: 25px
+    border: 1px solid $primary
   
-  
+    
+
+    

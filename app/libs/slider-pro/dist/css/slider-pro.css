@@ -458,7 +458,11 @@
 	height: 40px;
 	cursor: pointer;
 	background: rgba(#909e9e, .2);
-	border-radius: 2px
+	border-radius: 2px;
+	transition: 400ms all
+}
+.sp-arrow:hover {
+	background: rgba(#909e9e, .5);
 }
 
 .sp-vertical .sp-arrow {
@@ -505,7 +509,7 @@
 	content: '';
 	position: absolute;
 	width: 15%;
-	height: 26%;
+	height: 27%;
 	background-color: rgba(#fff, .5);
 }
 
@@ -848,4 +852,9 @@ a.sp-video:after {
 
 .slider-pro img.sp-layer {
 	border: none;
+}
+@media (max-width: 614px) {
+	.sp-arrows {
+		display: none;
+	}
 }

@@ -4,6 +4,8 @@ module.exports = function () {           /* запускает сервер и �
       server: 'build/',              /*Браузер синк запускается из этой папки */
       browser: 'Firefox',             // закоментить если нужен хром
       notify: false,                   //Отключает комментарии
+      tunnel: true,
+      tunnel: "projectmane", //Demonstration page: http://projectmane.localtunnel.me
     });
                  /* слежение за файлами */
     $.gulp.watch('app/sass/**/*.sass', $.gulp.series('sass'));

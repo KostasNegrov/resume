@@ -1,4 +1,6 @@
 jQuery(document).ready(function ($) {
+	// 	/* wow.js */
+	// new WOW().init();
 
 		/* scroll header */
 	$(window).scroll(function () {
@@ -25,9 +27,10 @@ jQuery(document).ready(function ($) {
 		arrows: true,            /* стрелки по бокам */
 		fadeArrows: false,         /* стрелки отображаются всегда */
 		buttons: false,          /* Точки снизу */
-		autoplay: true,
-		
-		
+		autoplay: false,		
 	});
+
+	
+
 
 });

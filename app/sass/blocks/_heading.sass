@@ -1,0 +1,80 @@
+
+
+.heading
+	// padding-top: 4.5em
+	padding-bottom: 2.187em
+	&__line
+		width: 4px
+		height: 5.625em
+		float: left
+		background-color: $accent   
+		margin-right: 2.5em
+	&__title
+		font-size: 1.875em
+		font-weight: 300
+		color: $colorbg
+		line-height: 1.2
+		padding-top: 0.333em
+		padding-bottom: 0.666em
+	&__big
+		text-transform: uppercase
+		font-weight: bold
+	&__paragraph
+		position: relative
+		font-size: 1.125em
+		color: $colordecoration
+		font-weight: bold
+		font-style: italic
+		margin-left: 2.5em
+		margin-bottom: 1.666em	
+		z-index: 0
+		&::before
+			content: ''
+			z-index: 997
+			position: absolute
+			top: 3.055em
+			left: 0		
+			right: 0
+			bottom: 0	
+			width: 26em
+			height: 1px
+			background-color: $primary
+
+@media (max-width: 1400px)
+  .heading
+    &__line
+      height: 4.425em
+    &__title
+      font-size: 1.5em
+
+@media (max-width: 990px)
+	.heading	
+		&__paragraph
+			&::before
+				width: 100%
+@media (max-width: 370px)
+	.heading
+		&__line
+			margin-right: 1.5em
+		&__paragraph
+			margin-left: 1.5em
+
+
+
+	
+
+     
+   
+     
+
+// @media (min-width: 1550px)
+  
+
+// @media (max-width: 910px)
+ 
+   
+// @media (max-width: 768px)
+  
+// @media (max-width: 576px)
+  
+// @media (max-width: 370px)

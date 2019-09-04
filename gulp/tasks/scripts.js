@@ -1,6 +1,7 @@
 const jsFiles = [     /* Массив с путями к файлам */
-  $.path.jquery,
+  $.path.jquery,  
   $.path.slidePro,
+  // $.path.wow,
   $.path.js,
 ];
 
