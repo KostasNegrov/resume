@@ -1,0 +1,194 @@
+
+
+.skills
+  background: url('../images/photo/skills-bg-1920px.jpg') center no-repeat
+  background-size: cover
+  font-size: 1.125em
+  overflow: hidden
+  position: relative
+  z-index: 0  
+  color: $white
+  font-weight: 300
+  @media (min-resolution: 2dppx), (max-width: 1500px)
+      background-image: url('../images/photo/skills-bg-1270px.jpg')
+  @media (min-resolution: 2dppx), (max-width: 769px)
+      background-image: url('../images/photo/skills-bg_780px.jpg')
+  &::before
+    content: ' '
+    background-color: rgba($colorbg, .8)
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: -1
+  &__heading
+    padding-bottom: 1.5em
+  &__box
+    display: flex
+    margin: 5em 0 4em 0
+    border-bottom: 1px solid $primary
+  &__left
+    flex: 42%
+    margin-right: 4.5%
+  &__right
+    flex: 53%
+  &__title
+    font-size: 1.666em
+    text-transform: uppercase
+    font-weight: normal
+    color: $white
+  &__line 
+    height: 3.2em
+  &__paragraph
+    &::before
+      top: 0.78em
+      width: 100%
+  &__text
+    text-indent: 2.5em
+    padding-bottom: 2.8em  
+  &__tabs
+    overflow: hidden;   
+  &__navigation
+    margin-top: 6.5%
+    border-bottom: 1px solid $primary  
+    button:first-child
+      margin-left: 0.9em
+  &__button 
+    background-color: inherit    
+    border: 1px solid transparent
+    border-bottom: none
+    outline: none
+    cursor: pointer
+    width: 5.555em
+    height: 2.5em    
+    color:  $white
+    transition: all 0.3s
+    font-weight: 300
+    border-radius: 0.277em 0.277em 0 0
+    &:hover
+      border: 1px solid $primary
+      border-bottom: none       
+      background-color: rgba($primary, .2)
+  &--active
+    border: 1px solid $primary
+    border-bottom: none     
+    background-color: rgba($primary, .2)
+  &__wrap   
+    width: 100%
+    margin: 2.777em auto
+  &__item
+    &:nth-child(2)
+      margin-top: -1.388em
+    &:nth-child(3)
+      margin-top: -1.388em    
+  &__progress
+    padding-top: 0.833em
+  &__box   
+    margin: 4em 0 4em 0
+
+
+.tabcontent 
+	animation: fadeEffect 1s
+
+
+@keyframes fadeEffect 
+  0% 
+    opacity: 0
+    
+  100% 
+    opacity: 1
+
+@media (max-width: 1400px)
+  .skills
+    &__heading
+      font-size: .8em
+    &__text
+      font-size: 0.9em
+    &__right
+      font-size: 0.9em
+    &__navigation
+      margin-top: 4.5%   
+
+@media (max-width: 1118px)
+  .skills    
+    &__navigation
+      margin-top: 4.8%   
+@media (max-width: 1025px)
+  .skills
+    &__right
+      font-size: 0.8333em
+@media (max-width: 990px)
+  .skills
+    &__box
+      flex-direction: column
+    &__navigation
+      margin-top: 1%
+    &__wrap
+      margin-top: 1.777em
+    &__item
+      height: 370px
+    &__item
+      &:nth-child(2)
+        margin-top: 0
+      &:nth-child(3)
+        margin-top: 0 
+
+@media (max-width: 768px)
+  .skills
+    &__heading
+      font-size: 0.75em
+    &__text
+      font-size: 0.85em
+    &__right
+      font-size: 0.85em  
+  
+@media (max-width: 576px)
+  .skills
+    &__heading
+      margin-top: 0
+      font-size: 0.65em
+    &__text
+      font-size: 0.7em
+    &__right
+      font-size: 0.7em  
+    &__box   
+      margin: 2.5em 0 2.3em 0    
+    &__navigation     
+      button:first-child
+        margin-left: 0
+@media (max-width: 393px)
+  .skills  
+    &__button      
+      border: 1px solid $primary
+      &:hover
+        border: 1px solid $primary
+    &__navigation      
+      border-bottom: none
+      button:nth-child(5)
+        margin-top: 3px
+        
+    
+    
+  
+
+     
+     
+
+ 
+  
+// @media (max-width: 370px)
+  
+   
+
+
+
+    
+
+   
+      
+      
+
+
+
+    

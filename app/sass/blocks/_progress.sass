@@ -1,0 +1,41 @@
+
+
+.progress
+  &__name
+    font-size: 14px
+    color: $white
+    font-weight: normal
+    font-style: italic
+    text-transform: uppercase
+    line-height: 1.5
+    margin: 10px 0
+  &__element
+    border: 1px solid rgba(255, 255, 255, .25)
+    border-radius: 3px
+    padding: 2px
+  &__line
+    background-color: $accent
+    width: 0
+    height: 4px
+    position: relative
+  &__tooltip
+    background-color: $colorbgtooltip
+    position: absolute
+    right: -15px
+    top: -32px
+    width: 31px    
+    font-size: 11px    
+    color: $white
+    font-weight: normal
+    line-height: 18px
+    text-align: center
+    border-radius: 3px
+    display: none
+    &:before
+      content: ' '
+      border: 4px solid transparent
+      border-top: 4px solid $colorbgtooltip
+      position: absolute
+      bottom: -12px
+      left: 50%
+      transform: translate(-50%, -50%)
