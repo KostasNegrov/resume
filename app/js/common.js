@@ -1,6 +1,7 @@
 jQuery(document).ready(function ($) {
 	// 	/* wow.js */
 	// new WOW().init();
+	
 
 	/* scroll header */
 	$(window).scroll(function () {
@@ -33,7 +34,12 @@ jQuery(document).ready(function ($) {
 		/* стрелки отображаются всегда */
 		buttons: false,
 		/* Точки снизу */
-		autoplay: false,
+		autoplay: true,
+		breakpoints: {    /*Для разрешения на разных экранах*/		
+			768: {				
+				arrows: false,
+			},			
+		}
 	});
 
 	/* Скрипт для секции скилов  */
@@ -46,12 +52,8 @@ jQuery(document).ready(function ($) {
 			$(item).find(tooltip).show(animationLength);
 		});
 	}
-
 	let animate = true;
-
-
 	$(window).scroll(function () {
-
 		if ($('.skills').offset().top <= $(window).scrollTop() + 150) {
 			if (animate) {
 				moveProgressBar('.progress__element', '.progress__line', '.progress__tooltip');
@@ -61,7 +63,34 @@ jQuery(document).ready(function ($) {
 
 	});
 
+	/* button upstairs */
+	$(window).scroll(function () {
+		if ($(this).scrollTop() != 0) {
+			$('#toTop').fadeIn();
+		} else {
+			$('#toTop').fadeOut();
+		}
+	});
+	$('#toTop').click(function () {
+		$('body,html').animate({ scrollTop: 0 }, 800);
+	});
+
+	/* modal windows */
+	$('.button__click').click(function(){
+		$('.overlay').fadeIn(400);
+	});
+	$('.popup__close').click(function(){
+		$('.overlay').fadeOut(400);
+	});
+	$(document).click(function(event) {
+		if ($(event.target).closest('.overlay').length || $(event.target).
+			closest('.button__click').length ) return;
+		$('.overlay').fadeOut(400);
+		event.stopPropagation();
+	}); 
+
 });
+
 
 /* Tabs */
 function openTab(evt, tabeName) {
@@ -79,3 +108,36 @@ function openTab(evt, tabeName) {
 }
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+
+
+/* Yandex map */
+ymaps.ready(function () {
+	var myMap = new ymaps.Map('map', {
+			center: [53.929456, 27.557071],
+			zoom: 5,
+			controls: []
+		}, {
+			searchControlProvider: 'yandex#search'
+		}),		
+		MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+			'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+		),
+		myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+			hintContent: 'Собственный значок метки',
+			balloonContent: 'Я здесь живу)'
+		}, {			
+			iconLayout: 'default#image',			
+			iconImageHref: 'images/icon/map-icon.png',
+			iconImageSize: [28, 51],			
+			iconImageOffset: [-14, -51]
+		})
+	myMap.geoObjects
+		.add(myPlacemark)
+		.add(myPlacemarkWithContent);
+});
+
+//remove preloader
+
+$(window).on('load', function () {
+	$('.preloader').delay(2000).fadeOut('slow');
+});

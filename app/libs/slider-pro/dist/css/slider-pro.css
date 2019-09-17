@@ -316,6 +316,7 @@
 --------------------------------------------------*/
 .sp-grab {
 	cursor: default;
+	 
 }
 
 .sp-grabbing {
@@ -853,8 +854,9 @@ a.sp-video:after {
 .slider-pro img.sp-layer {
 	border: none;
 }
-@media (max-width: 614px) {
-	.sp-arrows {
-		display: none;
+/* @media (max-width: 1400px) {
+	.sp-horizontal .sp-arrows {
+		top: 38%;
 	}
-}
+} */
+

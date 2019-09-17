@@ -15,14 +15,14 @@
   &::before
     content: ' '
     background-color: rgba($colorbg, .85)
-    position: absolute
+    position: absolute 
     top: 0
     left: 0
     right: 0
     bottom: 0
     z-index: -1
   &__box
-    margin-top: 340px
+    margin-top: 360px
     // margin-bottom: 170px
     cursor: default
     z-index: 0
@@ -54,7 +54,7 @@
      
 @media (max-width: 1400px)
   .intro
-    height: 690px
+    height: 710px
   .intro__box
     margin-top: 230px
 
@@ -70,6 +70,8 @@
   .intro__paragraph
     width: 82%
 @media (max-width: 768px)
+  .intro
+    background-attachment: scroll
   .intro__title
     font-size: 1.2em
   .intro__paragraph
@@ -94,9 +96,9 @@
   .intro__line
     height: 65px
   .intro__box
-@media (max-width: 370px)
-  .intro
-    background-image: none
+// @media (max-width: 370px)
+//   .intro
+//     background-image: none
 
 
 

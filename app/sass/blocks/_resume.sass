@@ -17,7 +17,7 @@
   &__item:nth-child(3)
       margin-top: 4em    
   &__block
-    background-color: $colorbg
+    background-color: $colorbgskills
     position: relative
     &--img
       float: left  
@@ -26,7 +26,7 @@
       transform: translateY(-50%)
       left: 5%    
     &--title
-      padding: 0.961em 0 0.961em 8.942em
+      padding: 2% 18%
       color: $white
       font-size: 1.3em
       font-weight: normal
@@ -39,23 +39,39 @@
         left: 14%
         background-color: $colorbgtooltip
         width: 2px
-        height: 2.3em
-        z-index: 5
+        height: 62%
+        z-index: 1
   &__container
-    max-width: 950px        
+    max-width: 82%        
     margin: 0 auto 
+    .resume__description--line
+      &:nth-child(1)  
+        &::before
+          top: 50%
+          height: 92%    
+    
   &__description
     display: flex
     align-items: flex-start
     line-height: 1.2
     color: $colorbg
     margin-top: 2em
+    position: relative
+    &--line      
+      &::before
+        content: ''
+        position: absolute
+        top: 8% 
+        left: 0.4%
+        width: 1px
+        height: 100%
+        background-color: $colorbgtooltip
+        z-index: 1
   &__date        
-    font-size: 18px
+    font-size: 1.125em
     flex: 30%
     position: relative
     padding-left: 35px
-
     &::before
       content: ''
       position: absolute
@@ -65,14 +81,169 @@
       width: 8px
       height: 8px
       background-color:  $colorbg
-      border-radius: 50%
+      border-radius: 50%     
   &__company
     flex: 70%    
   &__name
-    font-size: 20px
+    font-size: 1.25em
     font-weight: 700
   &__text
     padding-top: 15px
     padding-bottom: 10px
     font-size: 1.125em
     
+@media (max-width: 1400px) 
+  .resume
+    &__line
+      margin-right: 2em
+    &__paragraph
+      margin-left: 2em
+    
+    &__block
+      &--title
+        font-size: 1.1em
+        padding: 1.5% 18%
+      &--img
+        width: 40px
+    &__line
+      height: 2.8em
+      
+    &__date
+      font-size: 1em
+    &__name
+      font-size: 1.1em
+    &__text
+      font-size: 1em
+      &--one
+        font-size: 0.9em   
+  
+ 
+@media (max-width: 990px)
+  .resume
+    &__container
+      max-width: 88%
+    &__date      
+      flex: 40%
+    &__company
+      flex: 60%
+
+@media (max-width: 768px)
+  .resume
+    &__container
+      max-width: 92%
+    &__item:nth-child(3)
+      margin-top: 2.5em  
+    &__date
+      font-size: 0.95em
+    &__name
+      font-size: 1em
+    &__text
+      font-size: 0.95em
+    &__title
+      font-size: 1.35em
+    &__line
+      height: 2.7em
+    &__block     
+      &--img
+        width: 30px
+    &__description    
+      &--line      
+        &::before       
+          top: 6% 
+          left: 0.6%
+          width: 1px
+          height: 100%
+
+@media (max-width: 576px)
+  .resume
+    &__heading
+      padding-bottom: 0.5em
+    &__title
+      font-size: 1.25em
+    &__line
+      height: 2.3em
+    &__box
+      margin: 2em 0
+    &__block
+      &--title
+        font-size: 1em        
+      &--img
+        width: 27px   
+    &__name
+      font-size: 0.95em
+    &__date
+      font-size: 0.8em
+    &__text
+      font-size: 0.9em
+      &--one
+        font-size: 0.8em  
+
+@media (max-width: 539px)  
+  .resume
+    &__description    
+      &--line      
+        &::before       
+          top: 5%
+          height: 100%          
+    &__container    
+      .resume__description--line
+        &:nth-child(1)  
+          &::before
+            top: 35%
+            height: 97% 
+@media (max-width: 456px)  
+  .resume     
+    &__description    
+      &--line      
+        &::before       
+          top: 4.5%
+          height: 100%  
+          left: 0.7%        
+    &__container    
+      .resume__description--line
+        &:nth-child(1)  
+          &::before
+            top: 45%
+            height: 87% 
+    &__block
+      &--img
+        width: 24px 
+@media (max-width: 370px)
+  .resume
+    &__block
+      &--title
+        padding-left: 21%
+        &::before
+          left: 16%
+    &__date
+      padding-left: 20px
+
+@media (max-width: 339px)
+  .resume     
+    &__description    
+      &--line      
+        &::before       
+          top: 3.5%
+          height: 100%  
+          left: 1.2%        
+    &__container    
+      .resume__description--line
+        &:nth-child(1)  
+          &::before
+            top: 40%
+            height: 87% 
+        
+// @media (max-width: 393px)
+ 
+        
+    
+    
+  
+
+     
+     
+
+ 
+  
+// @media (max-width: 370px)
+  

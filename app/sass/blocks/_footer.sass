@@ -1,0 +1,25 @@
+
+
+.footer
+  line-height: 1.4
+  &__box
+    display: flex
+    justify-content: space-between
+    padding: 1em 0
+
+
+@media (max-width: 768px)
+  .footer  
+    &__box
+      font-size: 14px
+@media (max-width: 576px)
+  .footer  
+    &__box
+      font-size: 13px
+@media (max-width: 370px)
+  .footer  
+    &__box
+      flex-direction: column
+    &__contact      
+      padding-top: 5px
+

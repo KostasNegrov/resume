@@ -1,0 +1,48 @@
+
+
+
+
+input, textarea
+  display: inline-block
+  width: 100%
+  background-color: transparent
+  color: $colortext
+  font-style: italic
+  border: 1px solid $colorbgtooltip
+  border-radius: 2px
+  padding: 12px 22px
+  margin-bottom: 3.7%
+.message
+  &__form
+    max-width: 65.2%
+    margin-left: 45px
+  &__button
+    margin-left: 0
+    width: 100%
+    color: $colorbg
+    background: $accent
+    border: 1px solid transparent
+    z-index: 10
+    &:hover
+      border: 1px solid $white
+    &:after
+      z-index: -1
+
+@media (max-width: 1400px)
+  .message
+    &__form
+      max-width: 75%
+@media (max-width: 456px)
+  .message
+    &__form
+      max-width: 95%
+      margin-left: 0
+
+
+    
+  
+
+     
+   
+    
+

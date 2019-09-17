@@ -1,21 +1,50 @@
 
 
-.about
+.about  
+  background: url('../images/photo/men-left.jpg') bottom right no-repeat
+  background-size: contain
   position: relative
-  // background: url('../images/photo/photo__men.png') bottom right no-repeat
-  // background-size: contain
-  &__box
-    padding-top: 4.5em
-  &__background
-    position: absolute    
+  z-index: 0
+  &::before
+    content: ''
+    position: absolute
+    background-color: $white    
     bottom: 0
-    left: 65%    
-    width: 490px
-    height: 860px
+    right: 0
+    top: 0
+    left: 0
+    clip-path: polygon(0% 0%, calc(100% - 630px)  0%, calc(100% - 740px) 100%, 0% 100%)
     z-index: -1
-    &--img
-      width: 100%
-  
+  &::after
+    content: ''
+    position: absolute
+    background-color: rgba($white, .7)    
+    bottom: 0
+    right: 0
+    top: 0
+    left: 0
+    clip-path: polygon(0% 0%, calc(100% - 530px)  0%, calc(100% - 640px) 100%, 0% 100%)
+    z-index: -1
+  &__background
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(#fff, .3)
+    clip-path: polygon(0% 0%, calc(100% - 430px)  0%, calc(100% - 540px) 100%, 0% 100%)
+    z-index: -1
+  &__background:nth-child(2)    
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(#fff, .5)
+    clip-path: polygon(calc(100% - 30px) 0%, 100%  0%, 100% 100%, calc(100% - 100px) 100%)
+    z-index: -1
+  &__box
+    padding-top: 4.5em  
   &__text
     font-size: 1.125em
     margin-bottom: 2.5em
@@ -56,11 +85,15 @@
       background-color: $primary
 
 @media (max-width: 1400px)
-  .about
-    &__background
-      top: 51px      
-      width: 410px
-      height: 820px
+  .about   
+    &::before   
+      clip-path: polygon(0% 0%, calc(100% - 500px)  0%, calc(100% - 610px) 100%, 0% 100%)    
+    &::after    
+      clip-path: polygon(0% 0%, calc(100% - 430px)  0%, calc(100% - 540px) 100%, 0% 100%)   
+    &__background    
+      clip-path: polygon(0% 0%, calc(100% - 360px)  0%, calc(100% - 470px) 100%, 0% 100%)    
+    &__background:nth-child(2)       
+      clip-path: polygon(calc(100% - 15px) 0%, 100%  0%, 100% 100%, calc(100% - 85px) 100%)
     &__text
       font-size: 1em
     &__info
@@ -70,26 +103,20 @@
    
 
 @media (max-width: 1200px)
-  .about
-    &__background
-      top: 43px      
-      width: 410px      
+  .about      
     &__box
       padding-top: 3.1em
     
 
 @media (max-width: 1118px)
-  .about
-    &__background
-      top: 55px
-      padding-right: 35px 
-      width: 430px
+  .about    
     &__text
-      max-width: 78%
+      max-width: 65%
 @media (max-width: 990px)
    .about
-      &__background
-        display: none
+      &::before
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)         
+        background: linear-gradient(to right, $white 45%, transparent)    
       &__text
         max-width: 100%
       &__info
@@ -104,8 +131,9 @@
       font-size: 1.05em
     &__info
       font-size: 1.05em
-  
-  
+@media (max-width: 645px)
+  .about 
+    background-size: cover  
 @media (max-width: 576px)
   .about
     font-size: 0.8em
@@ -114,6 +142,18 @@
       font-size: 0,75em
       td
         padding-right: 1.2em
+@media (max-width: 470px)
+  .about  
+    background: none      
+    &::before
+      background: #dfdfdf   
+    &::after    
+      clip-path: polygon(0% 0%, calc(100% - 170px)  0%, calc(100% - 250px) 100%, 0% 100%)   
+    &__background    
+      clip-path: polygon(0% 0%, calc(100% - 70px)  0%, calc(100% - 145px) 100%, 0% 100%) 
+      
+      
+  
 
 @media (max-width: 392px)
   .about
